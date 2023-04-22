@@ -1,6 +1,7 @@
 # Lab-7_202001275
 
-Test Cases for Equivalence Partitioning:
+
+Equivalence Partitioning:
 
 <table>
   <tr>
@@ -29,7 +30,7 @@ Test Cases for Equivalence Partitioning:
   </tr>
 </table>
 
-Test Cases for Boundary Value Analysis:
+Boundary Value Analysis:
 
 <table>
   <tr>
@@ -344,3 +345,192 @@ public class LinearSearchTest {
   </tr>
 </table>
 </br>
+
+### Problem 4 | Triangle :
+
+### Boundary Value Analysis:
+
+<table>
+  <tr>
+    <th>Tester Action and Input Data</th>
+    <th>Expected Outcome</th>
+  </tr>
+  <tr>
+    <td>invalid inputs: a=0, b=0, c=0</td>
+    <td>INVALID</td>
+  </tr>
+  <tr>
+    <td>invalid inputs: a+b=c , a+c=b/td>
+    <td>INVALID</td>
+  </tr>
+  <tr>
+    <td>equilateral case: a=b=c==3</td>
+    <td>EQUILATERAL</td>
+  </tr>
+  <tr>
+    <td>Equilateral: a=b=c==100</td>
+    <td>EQUILATERAL</td>
+  </tr>
+  <tr>
+    <td>Isosceles: a=b≠c==5</td>
+    <td>ISOSCELES</td>
+  </tr>
+  <tr>
+    <td>Isosceles: a≠b=c=5</td>
+    <td>ISOSCELES</td>
+  </tr>
+  <tr>
+    <td>Isosceles: a=c≠b=5</td>
+    <td>ISOSCELES</td>
+  </tr>
+  <tr>
+    <td>Scalene: a=b+c-1</td>
+    <td>SCALENE</td>
+  </tr>
+  <tr>
+    <td>Scalene: b=a+c-1</td>
+    <td>SCALENE</td>
+  </tr>
+  <tr>
+    <td>Scalene: c=a+b-1</td>
+    <td>SCALENE</td>
+  </tr>
+  <tr>
+    <td>Maximum: a,b,c=Integer.MAX_VALUE</td>
+    <td>INVALID</td>
+  </tr>
+  <tr>
+    <td>Minimum: a,b,c=Integer.MIN_VALUE</td>
+    <td>INVALID</td>
+  </tr>
+</table>
+
+### Equivalence Partitioning:
+
+<table>
+  <tr>
+    <th>Tester Action and Input Data</th>
+    <th>Expected Outcome</th>
+  </tr>
+  <tr>
+    <td>Valid input: a=1, b=1, c=1</td>
+    <td>EQUILATERAL</td>
+  </tr>
+  <tr>
+    <td>Valid input: a=2, b=2, c=3</td>
+    <td>ISOSCELES</td>
+  </tr>
+  <tr>
+    <td>Valid input: a=4, b=2, c=5</td>
+    <td>SCALENE</td>
+  </tr>
+  <tr>
+    <td>Invalid input: a=0, b=0, c=0</td>
+    <td>INVALID</td>
+  </tr>
+  <tr>
+    <td>Invalid input: a=-1, b=3, c=9</td>
+    <td>INVALID</td>
+  </tr>
+  <tr>
+    <td>Valid input: a=1, b=1, c=1</td>
+    <td>EQUILATERAL</td>
+  </tr>
+  <tr>
+    <td>Valid input: a=5, b=5, c=6</td>
+    <td>ISOSCELES</td>
+  </tr>
+  <tr>
+    <td>Valid input: a=5, b=4, c=7</td>
+    <td>SCALENE</td>
+  </tr>
+  <tr>
+    <td>Invalid input: a=0, b=1, c=1</td>
+    <td>INVALID</td>
+  </tr>
+  <tr>
+    <td>Invalid input: a=1, b=0, c=1</td>
+    <td>INVALID</td>
+  </tr>
+  <tr>
+    <td>Invalid input: a=1, b=1, c=0</td>
+    <td>INVALID</td>
+  </tr>
+</table>
+</br>
+
+### Problem 5 :
+
+### Equivalence Partitioning:
+<table>
+  <tr>
+    <th>Tester Action and Input Data</th>
+    <th>Expected Outcome</th>
+  </tr>
+  <tr>
+    <td>Valid Inputs: s1 = "my", s2 = "myname"</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>Valid Inputs: s1 = "1", s2 = "123456"</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>Invalid Inputs: s1 = "", s2 = "hello world"</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>Invalid Inputs: s1 = "world", s2 = "hello world"</td>
+    <td>false</td>
+  </tr>
+</table>
+
+### Boundary Value Analysis:
+<table>
+  <tr>
+    <th>Tester Action and Input Data</th>
+    <th>Expected Outcome</th>
+  </tr>
+  <tr>
+    <td>s1 = "", s2 = "1234567"</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>s1 = "my", s2 = "mycar"</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>s1 = "abc", s2 = "a"</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>s1 = "a", s2 = "abc"</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>s1 = "11111", s2 = "11111222223333344444"</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>s1 = "abc", s2 = "abc"</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>s1 = "a", s2 = "b"</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>s1 = "a", s2 = "a"</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>s1 = "a", s2 = "b"</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>s1 = "a", s2 = " "</td>
+    <td>False</td>
+  </tr>
+</table>
+</br>
+
