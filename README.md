@@ -74,55 +74,6 @@ Boundary Value Analysis:
 
 ### Problem 1 :
 
-```
-import org.junit.Test;
-import static org.junit.Assert.*;
-
-public class LinearSearchTest {
-
-  @Test
-  public void testExistingValue() {
-    int[] arr = {1, 2, 3, 4, 5};
-    int index = linearSearch(3, arr);
-    assertEquals(2, index);
-  }
-
-  @Test
-  public void testNonExistingValue() {
-    int[] arr = {1, 2, 3, 4, 5};
-    int index = linearSearch(6, arr);
-    assertEquals(-1, index);
-  }
-
-  @Test
-  public void testFirstElement() {
-    int[] arr = {1, 2, 3, 4, 5};
-    int index = linearSearch(1, arr);
-    assertEquals(0, index);
-  }
-
-  @Test
-  public void testLastElement() {
-    int[] arr = {1, 2, 3, 4, 5};
-    int index = linearSearch(5, arr);
-    assertEquals(4, index);
-  }
-
-  @Test
-  public void testEmptyArray() {
-    int[] arr = {};
-    int index = linearSearch(1, arr);
-    assertEquals(-1, index);
-  }
-
-  @Test
-  public void testNullArray() {
-    int[] arr = null;
-    int index = linearSearch(1, arr);
-    assertEquals(-1, index);
-  }
-}
-```
 
 ### Equivalence Partitioning:
 
@@ -533,4 +484,93 @@ public class LinearSearchTest {
   </tr>
 </table>
 </br>
+
+### Problem 6 :
+
+(a) Equivalence Class:
+
+<table>
+  <tr>
+    <th>Tester Action and Input Data</th>
+    <th>Expected Outcome</th>
+  </tr>
+  <tr>
+    <td>a = -1, b = 1, c = 2</td>
+    <td>Invalid input</td>
+  </tr>
+  <tr>
+    <td>a = 1, b = 1, c = 1</td>
+    <td>Equilateral triangle</td>
+  </tr>
+  <tr>
+    <td>a = 2, b = 2, c = 3</td>
+    <td>Isosceles triangle</td>
+  </tr>
+  <tr>
+    <td>a = 3, b = 4, c = 5</td>
+    <td>Scalene right angled triangle</td>
+  </tr>
+  <tr>
+    <td>a = 3, b = 5, c = 4</td>
+    <td>Scalene right angled triangle</td>
+  </tr>
+  <tr>
+    <td>a = 5, b = 3, c = 4</td>
+    <td>Scalene right angled triangle</td>
+  </tr>
+  <tr>
+    <td>a = 2, b = 3, c = 6</td>
+    <td>invalid: not a triangle</td>
+  </tr>
+</table>
+</br>
+
+b) Test cases:
+
+Invalid inputs: a=0, b=0, c=0 | a+b=c, b+c=a, c+a=b
+Invalid inputs: a=-1, b=1, c=2
+Equilateral triangles: a=b=c=1 | a=b=c=10
+Isosceles triangles: a=b=10, c=5 | a=c=10, b=3 | b=c=10, a=6
+Scalene triangles: a=2, b=3, c=4 | a=4, b=5, c=6
+Right angled triangle: a=3, b=4, c=5 | a=4, b=6, c=10
+Non-triangle: a=1, b=2, c=3
+Non-positive input: a=-1, b=-2, c=-3
+</br>
+c) Boundary Condition: a+b>c
+
+a=Integer.MAX_VALUE, b=Integer.MAX_VALUE, c=1
+a=Double.MAX_VALUE, b=Double.MAX_VALUE, c=Double.MAX_VALUE
+</br>
+d) Boundary condition: a=c
+
+a=Integer.MAX_VALUE, b=2, c=Integer.MAX_VALUE
+a=Double.MAX_VALUE, b=3, c=Double.MAX_VALUE
+</br>
+e) Boundary condition: a=b=c
+
+a=Integer.MAX_VALUE, b=Integer.MAX_VALUE, c=Integer.MAX_VALUE
+a=Double.MAX_VALUE, b=Double.MAX_VALUE, c=Double.MAX_VALUE
+</br>
+f) Boundary condition: a^2+b^2=c^2
+
+a=Integer.MAX_VALUE, b=Integer.MAX_VALUE, c=Integer.MAX_VALUE
+a=Double.MAX_VALUE, b=Double.MAX_VALUE, c=Math.sqrt(Math.pow(Double.MAX_VALUE,2)+Math.pow(Double.MAX_VALUE,2))
+</br>
+g) non-triangle:
+
+a=1, b=2, c=5
+a=3, b=4, c=10
+a=4, b=5, c=20
+</br>
+h) Non-positive input:
+
+a=-1, b=-2, c=-3
+a=0, b=1, c=2
+a=0, b=-1, c=1
+</br>
+
+### Control Flow Graph:
+<br>
+
+
 
