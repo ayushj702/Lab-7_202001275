@@ -572,5 +572,23 @@ a=0, b=-1, c=1
 ### Control Flow Graph:
 <br>
 
+![alt text](https://github.com/ayushj702/Lab-7_202001275/blob/main/l7.drawio.png?raw=true)
 
+Test sets for coverage criterion:
+
+a) Statement Coverage:
+Test 1: p={new Point(0, 0), new Point(1, 1)}
+Test 2: p={new Point(0, 0), new Point(1, 0), new Point(2, 0)}
+
+b) Branch Coverage:
+Test 1: p={new Point(0, 0), new Point(1, 1)}
+Test 2: p={new Point(0, 0), new Point(1, 0), new Point(2, 0)}
+Test 3: p={new Point(0, 0), new Point(1, 0), new Point(1, 1)}
+
+c) Basic Condition Coverage:
+Test 1: p={new Point(0, 0), new Point(1, 1)}
+Test 2: p={new Point(0, 0), new Point(1, 0), new Point(2, 0)}
+Test 3: p={new Point(0, 0), new Point(1, 0), new Point(1, 1)}
+Test 4: p={new Point(0, 0), new Point(1, 0), new Point(0, 1)}
+Test 5: p={new Point(0, 0), new Point(0, 1), new Point(1, 1)}
 
