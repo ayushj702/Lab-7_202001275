@@ -577,18 +577,30 @@ a=0, b=-1, c=1
 Test sets for coverage criterion:
 
 a) Statement Coverage:
+<br>
 Test 1: p={new Point(0, 0), new Point(1, 1)}
+<br>
 Test 2: p={new Point(0, 0), new Point(1, 0), new Point(2, 0)}
-
+<br>
+<br>
 b) Branch Coverage:
+<br>
 Test 1: p={new Point(0, 0), new Point(1, 1)}
+<br>
 Test 2: p={new Point(0, 0), new Point(1, 0), new Point(2, 0)}
+<br>
 Test 3: p={new Point(0, 0), new Point(1, 0), new Point(1, 1)}
-
+<br>
+<br>
 c) Basic Condition Coverage:
+<br>
 Test 1: p={new Point(0, 0), new Point(1, 1)}
+<br>
 Test 2: p={new Point(0, 0), new Point(1, 0), new Point(2, 0)}
+<br>
 Test 3: p={new Point(0, 0), new Point(1, 0), new Point(1, 1)}
+<br>
 Test 4: p={new Point(0, 0), new Point(1, 0), new Point(0, 1)}
+<br>
 Test 5: p={new Point(0, 0), new Point(0, 1), new Point(1, 1)}
-
+<br>
